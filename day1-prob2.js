@@ -1,0 +1,1 @@
+Int32Array.from(document.body.innerText.split("\n\n").map(elf => elf.split("\n").map(calorieString => parseInt(calorieString)).reduce((a, b) => a + b))).sort().reverse().filter(Boolean).slice(0,3).reduce((a, b) => a + b)
