@@ -1,3 +1,4 @@
+let directions = document.body.innerText.split("");
 let pastCoordinates = new Map();
 let currentCoordinate = [0,0];
 
@@ -18,9 +19,6 @@ for (let path in directions) {
     }
 
     pastCoordinates.set(currentCoordinate.toString(), (pastCoordinates.has(currentCoordinate.toString()) ? pastCoordinates.get(currentCoordinate.toString()) + 1 : 1))
-
-    if (path < 8)
-        console.log(path, currentCoordinate, pastCoordinates)
 }
 
-pastCoordinates.size;
+// pastCoordinates.size;
